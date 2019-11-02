@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Test_Suite</th></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">55,529</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test_Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.prac.test.FlightSearchPageTest</td><td><a href="#m0">validateFlightSearchFeature</a></td><td rowspan="1">1572667728151</td><td rowspan="1">10635</td></tr><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.prac.test.HomePageTest</td><td><a href="#m1">validateHomePageTitle</a></td><td rowspan="1">1572667695209</td><td rowspan="1">355</td></tr><tr class="passedeven"><td><a href="#m2">verifyTopLinksHomePage</a></td><td rowspan="1">1572667700079</td><td rowspan="1">421</td></tr><tr class="passedodd"><td rowspan="2">com.prac.test.SearchPageTest</td><td><a href="#m3">validateSearchPageLinks</a></td><td rowspan="2">1572667716677</td><td rowspan="2">2105</td></tr><tr class="passedodd"><td><a href="#m4">validateSearchPageLinks</a></td></tr></tbody>
+</table>
+<h2>Test1</h2><h3 id="m0">com.prac.test.FlightSearchPageTest#validateFlightSearchFeature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{ValidationData=, InputData={
+&quot;Text&quot;:&quot;flight&quot;,
+&quot;TicketType&quot;:&quot;One way&quot;,
+&quot;SeatingClass&quot;:&quot;Business&quot;,
+&quot;Origin&quot;:&quot;BOM&quot;,
+&quot;Destination&quot;:&quot;PNQ&quot;
+}}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input placeholder=&quot;Where to?&quot; data-placeholder=&quot;Where to?&quot; data-next-placeholder=&quot;Where else?&quot; tabindex=&quot;0&quot; type=&quot;text&quot; jstcache=&quot;8879&quot; class=&quot;&quot; aria-haspopup=&quot;false&quot; role=&quot;combobox&quot; aria-autocomplete=&quot;list&quot; style=&quot;border: none; padding: 0px; margin: 0px; height: auto; width: 100%; outline: none;&quot; dir=&quot;ltr&quot; autocomplete=&quot;off&quot; spellcheck=&quot;false&quot;&gt; is not clickable at point (674, 460). Other element would receive the click: &lt;div class=&quot;gws-flights__glass-pane&quot; id=&quot;flt-glass&quot; role=&quot;presentation&quot; tabindex=&quot;-1&quot; jsaction=&quot;jsl._&quot; jstcache=&quot;4100&quot; style=&quot;display: block;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=78.0.3904.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;EC2AMAZ-DNSAJIU&apos;, ip: &apos;10.64.33.66&apos;, os.name: &apos;Windows Server 2016&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: D:\Users\sjain2\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52232}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fcdd603049a8a21b08aaad6a8138301d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at com.prac.utils.Actions.ActionsUtils.clearAndTypeTextField(ActionsUtils.java:36)
+	at com.prac.pageObjects.FlightSearchPage.enterOneWayFlightSearchDataAndSearch(FlightSearchPage.java:99)
+	at com.prac.test.FlightSearchPageTest.validateFlightSearchFeature(FlightSearchPageTest.java:51)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.prac.test.HomePageTest#validateHomePageTitle</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{ValidationData={
+&quot;Title&quot;:&quot;Google&quot;
+}}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.prac.test.HomePageTest#verifyTopLinksHomePage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{ValidationData=}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.prac.test.SearchPageTest#validateSearchPageLinks</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{ValidationData=, InputData={
+&quot;Text&quot;:&quot;World&quot;
+}}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.prac.test.SearchPageTest#validateSearchPageLinks</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{ValidationData=, InputData={
+&quot;Text&quot;:&quot;Testing&quot;
+}}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

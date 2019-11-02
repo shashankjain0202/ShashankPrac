@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test_Suite">
+
+<listeners>
+<listener class-name="com.prac.utils.Listeners.TestNGListener"/>
+</listeners>
+
+	<test name="Test1">
+
+		<classes>
+			<class name = "com.prac.test.HomePageTest">
+				<methods>
+					<include name="validateHomePageTitle"/>
+					<include name="verifyTopLinksHomePage"/>
+				</methods>
+
+			</class> 
+			<class name = "com.prac.test.SearchPageTest">
+				<methods>
+					<include name="validateSearchPageLinks"/>		
+				</methods>
+			</class>
+			
+			<class name = "com.prac.test.FlightSearchPageTest">
+				<methods>
+					<include name="validateFlightSearchFeature"/>		
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+
+</suite>
