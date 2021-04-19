@@ -37,11 +37,11 @@ public class HomePageTest extends ApplicationBase{
 		Logger _log = Logger.getLogger(HomePageTest.class);
 		actions = new ActionsUtils(driver);
 		homePage = new HomePage(driver);
-		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_AboutLink, "About Link"), "About link not found");
-		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_StoreLink, "About Link"), "Store link not found");
-		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_GmailLink, "About Link"), "Gmail link not found");
-		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_ImagesLink, "About Link"), "Images link not found");
-		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_AppsLink, "About Link"), "Apps link not found");	
+		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_AboutLink_By, "About Link"), "About link not found");
+		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_StoreLink_By, "Store link"), "Store link not found");
+		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_GmailLink_By, "Gmail link"), "Gmail link not found");
+		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_ImagesLink_By, "Images link"), "Images link not found");
+		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_AppsLink_By, "Apps link"), "Apps link not found");	
 		sAssert.assertAll();
 	
 	}

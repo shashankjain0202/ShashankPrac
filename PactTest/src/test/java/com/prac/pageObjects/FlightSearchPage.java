@@ -3,6 +3,7 @@ package com.prac.pageObjects;
 import java.util.HashMap;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,9 +55,15 @@ public WebElement flightSearch_DestinationAirportElementToBeClicked;
 @FindBy(xpath = ".//div[@id='sb_ifc50']/input")
 public WebElement flightSearch_DestinationAirportInputField;
 
-
 @FindBy(xpath = ".//span[text()='Search']")
 public WebElement flightSearch_SearchButton;
+
+public By flightSearch_TicketTypeDropDown_By = By.xpath("(.//div[contains(@jsaction,'ticket_type')])[1]");
+public By flightSearch_PassangerDropDown_By = By.id("flt-pax-button");
+public By flightSearch_SeatingClassDropdown_By = By.xpath(".//div[contains(@jsaction,'seating_class')]");
+public By flightSearch_OriginAirportElementToBeClicked_By = By.xpath(".//div[contains(@class,'gws-flights__flex-box')]/div[@data-flt-ve='origin_airport']");
+public By flightSearch_DestinationAirportElementToBeClicked_By = By.xpath(".//div[contains(@class,'gws-flights__flex-box')]/div[@data-flt-ve='destination_airport']");
+public By flightSearch_SearchButton_By = By.xpath(".//span[text()='Search']");
 
 
 public void selectTicketType(String ticketType) {

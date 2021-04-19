@@ -1,5 +1,6 @@
 package com.prac.pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,6 +38,13 @@ public WebElement homePage_searchTextBox;
 
 @FindBy(name = "btnK")
 public WebElement homePage_searchButton;
+
+public By homePage_AboutLink_By = By.xpath(".//*[text()='About']");
+public By homePage_StoreLink_By = By.xpath(".//*[text()='Store']");
+public By homePage_GmailLink_By = By.xpath(".//*[text()='Gmail']");
+public By homePage_ImagesLink_By = By.xpath(".//*[text()='Images']");
+public By homePage_AppsLink_By = By.xpath(".//*[@title='Google apps']");
+
 
 public void searchText(String text) {
 	

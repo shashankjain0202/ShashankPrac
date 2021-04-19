@@ -3,6 +3,7 @@ package com.prac.utils.Actions;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -17,16 +18,16 @@ public class ActionsUtils {
 		_log = Logger.getLogger(ActionsUtils.class);
 	}
 	
-	public boolean isWebElementExist(WebElement element, String Desc) {
+	public boolean isWebElementExist(By elementByLocator, String Desc) {
 		
-		OtherUtils oUtils = new OtherUtils(driver);
-		List<WebElement> lst = driver.findElements(oUtils.getElementLocator(element));
+		//OtherUtils oUtils = new OtherUtils(driver);
+		List<WebElement> lst = driver.findElements(elementByLocator);
 		if (lst.size()>0) {
-			_log.info("Element: "+ Desc+ " is found with"+ element.toString());
+			_log.info("Element: "+ Desc+ " is found with"+ elementByLocator.toString());
 			return true;
 		}
 		else {
-			_log.info("Element: "+ Desc+ " is not found with"+ element.toString());
+			_log.info("Element: "+ Desc+ " is not found with"+ elementByLocator.toString());
 			return false;		
 		}
 	}

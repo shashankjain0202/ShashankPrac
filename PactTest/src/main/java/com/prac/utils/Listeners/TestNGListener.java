@@ -41,7 +41,7 @@ public class TestNGListener extends baseClass implements ITestListener {
 		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 		String destFilePath = System.getProperty("user.dir")+ "/failure_screenshots/"+ "/"+formater.format(calendar.getTime())+ "/"+result.getName()+".png";
 		File destFile = new File(destFilePath);
-		OtherUtils.takeScreenshot(destFile);
+		OtherUtils.takeScreenshot(destFile, driver);
 		System.out.println("Taking screenshots for failure of test case:"+result.getName());
 		
 		

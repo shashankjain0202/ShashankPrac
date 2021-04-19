@@ -70,7 +70,7 @@ public class OtherUtils {
 				
 	}
 	
-	public static void takeScreenshot(File destFile) {
+	public static void takeScreenshot(File destFile, WebDriver driver) {
 		TakesScreenshot scrShot =((TakesScreenshot)driver);
 		File src= scrShot.getScreenshotAs(OutputType.FILE);
 		try {

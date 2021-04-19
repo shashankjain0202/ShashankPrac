@@ -1,5 +1,6 @@
 package com.prac.pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,6 +41,12 @@ public WebElement searchPage_moreOptionsLink;
 
 @FindBy(xpath = ".//a[contains(@href,'flights')]")
 public WebElement searchPage_moreOptionsLink_flights;
+
+public By searchPage_Links_All_By = By.xpath(".//*[@id='hdtb-msb-vis']/div[1]");
+public By searchPage_Links_Images_By =  By.xpath(".//*[@id='hdtb-msb-vis']/div[2]");
+public By searchPage_Links_News_By = By.xpath(".//*[@id='hdtb-msb-vis']/div[3]");
+public By searchPage_Links_Books_By = By.xpath(".//*[@id='hdtb-msb-vis']/div[4]");
+public By searchPage_Links_Maps_By = By.xpath(".//*[@id='hdtb-msb-vis']/div[5]");
 
 
 

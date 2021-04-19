@@ -18,7 +18,7 @@ import com.prac.utils.Actions.ActionsUtils;
 public class FlightSearchPageTest extends ApplicationBase {
 	
 	ActionsUtils actions;
-	HomePage homePage;
+	HomePage homePage;  
 	SearchPage searchPage;
 	FlightSearchPage flightSearchPage;
 	
@@ -38,12 +38,12 @@ public class FlightSearchPageTest extends ApplicationBase {
 		
 		searchPage.goToFligtSearchLink();
 		
-		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_TicketTypeDropDown, "Ticket Type dropdown"), "Ticket Type dropdown is missing");
-		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_PassangerDropDown, "Passanger dropdown"), "Passanger dropdown is missing");
-		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_SeatingClassDropdown, "Seating Class dropdown"), "Seating class dropdown is missing");
-		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_OriginAirportElementToBeClicked, "Origin Airport field"), "Origin Airport field is missing");
-		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_DestinationAirportElementToBeClicked, "Destination Airport field"), "Destination Airport field is missing");
-		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_SearchButton, "Flight search button"), "Flight search button is missing");
+		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_TicketTypeDropDown_By , "Ticket Type dropdown"), "Ticket Type dropdown is missing");
+		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_PassangerDropDown_By, "Passanger dropdown"), "Passanger dropdown is missing");
+		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_SeatingClassDropdown_By, "Seating Class dropdown"), "Seating class dropdown is missing");
+		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_OriginAirportElementToBeClicked_By, "Origin Airport field"), "Origin Airport field is missing");
+		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_DestinationAirportElementToBeClicked_By, "Destination Airport field"), "Destination Airport field is missing");
+		sAssert.assertTrue(actions.isWebElementExist(flightSearchPage.flightSearch_SearchButton_By, "Flight search button"), "Flight search button is missing");
 		
 		
 		flightSearchPage.enterOneWayFlightSearchDataAndSearch(inputDataMap);

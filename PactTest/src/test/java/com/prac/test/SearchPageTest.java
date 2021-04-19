@@ -30,11 +30,11 @@ public class SearchPageTest extends ApplicationBase {
 		searchPage = new SearchPage(driver);
 		HashMap<String, String> InputDataMap =JSONUtils.readSimpleJSONTOMAP(testData.get("InputData"));
 		homePage.searchText(InputDataMap.get("Text"));
-		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_All, "All link on search Page"),"All links not present of search Page");
-		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_Images, "Images link on search Page"),"Images links not present of search Page");
-		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_Books, "Books link on search Page"),"Books links not present of search Page");
-		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_Maps, "Maps link on search Page"),"Maps links not present of search Page");
-		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_News, "News link on search Page"),"News links not present of search Page");
+		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_All_By, "All link on search Page"),"All links not present of search Page");
+		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_Images_By, "Images link on search Page"),"Images links not present of search Page");
+		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_Books_By, "Books link on search Page"),"Books links not present of search Page");
+		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_Maps_By, "Maps link on search Page"),"Maps links not present of search Page");
+		sAssert.assertTrue(actions.isWebElementExist(searchPage.searchPage_Links_News_By, "News link on search Page"),"News links not present of search Page");
 		sAssert.assertAll();
 	}
 

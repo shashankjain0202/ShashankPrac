@@ -82,13 +82,6 @@ public class baseClass {
 		_log.info("******************************Started executing test case"+getClass().getName()+":"+ testMethod.getName()+"********************************");
 		
 		
-		/*
-		 * try {
-		 * 
-		 * Runtime.getRuntime().exec("src\\test\\resources\\AutoITFiles\\urlAuth.exe");
-		 * } catch (Exception e) { e.printStackTrace(); }
-		 */
-		
 		String url = fileUtils.getProperty("url");
 		driver.get(url);
 		try {
