@@ -4,9 +4,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import javax.naming.Context;
-
 import org.apache.log4j.Logger;
-import org.omg.CORBA.portable.ApplicationException;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;

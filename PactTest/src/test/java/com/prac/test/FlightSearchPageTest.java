@@ -1,9 +1,7 @@
 package com.prac.test;
 
-import static org.junit.Assert.assertArrayEquals;
 
 import java.util.HashMap;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
