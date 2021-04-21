@@ -1,6 +1,5 @@
-/target/
-/.test-output/
-/failure_screenshots*/
+/*target*/
+/test-output/
+/failure_screenshots/
 /Applicationlog.log/
-/.metadata/
-/*test-output/
+/*.metadata*/

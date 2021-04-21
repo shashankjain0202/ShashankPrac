@@ -2,14 +2,19 @@ package com.prac.base;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.MDC;
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -33,12 +38,12 @@ public class baseClass {
 	}
 	
 	@BeforeClass
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		
 		MDC.put("testMethodName",  "SetUp");
 		MDC.put("testClassName",this.getClass());
 		
-		createdriver();
+		createDriver();
 		
 		driver.manage().timeouts().pageLoadTimeout(Integer.parseInt(fileUtils.getProperty("pageLoadTimeOut")),TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(fileUtils.getProperty("implcitelyWaitTime")),TimeUnit.SECONDS);
@@ -46,7 +51,7 @@ public class baseClass {
 	}
 	
 	
-	public void createdriver() {
+	public void createDriver() throws MalformedURLException {
 		
 		String browser = fileUtils.getProperty("browser");
 		switch (browser) {
@@ -56,7 +61,7 @@ public class baseClass {
 			_log.info("Started chrome driver");
 			driver.manage().window().maximize();
 			break;
-			
+
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\resources\\geckodriver.exe");
 			driver = new FirefoxDriver();
@@ -64,10 +69,15 @@ public class baseClass {
 			driver.manage().window().maximize();
 			break;
 
+		case "remote_firefox":
+			DesiredCapabilities capabilities =  DesiredCapabilities.firefox();
+			URL url = new URL("http://localhost:4444/wd/hub");
+			driver = new RemoteWebDriver(url, capabilities);
+			break;
+			
 		default:
 			break;
 		}
-		
 	}
 	
 	@AfterClass

@@ -2,12 +2,17 @@ package com.prac.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 
 public class OtherUtils {
 	
@@ -80,6 +85,5 @@ public class OtherUtils {
 		}
 	}
 
-	
 
 }

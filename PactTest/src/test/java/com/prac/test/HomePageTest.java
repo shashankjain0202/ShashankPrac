@@ -38,10 +38,8 @@ public class HomePageTest extends ApplicationBase{
 		actions = new ActionsUtils(driver);
 		homePage = new HomePage(driver);
 		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_AboutLink_By, "About Link"), "About link not found");
-		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_StoreLink_By, "Store link"), "Store link not found");
 		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_GmailLink_By, "Gmail link"), "Gmail link not found");
 		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_ImagesLink_By, "Images link"), "Images link not found");
-		sAssert.assertTrue(actions.isWebElementExist(homePage.homePage_AppsLink_By, "Apps link"), "Apps link not found");	
 		sAssert.assertAll();
 	
 	}
