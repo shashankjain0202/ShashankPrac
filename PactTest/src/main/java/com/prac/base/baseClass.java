@@ -75,6 +75,12 @@ public class baseClass {
 			driver = new RemoteWebDriver(url, capabilities);
 			break;
 			
+		case "remote_chrome":
+			DesiredCapabilities capabilitiesChrome =  DesiredCapabilities.chrome();
+			URL urlChrome = new URL("http://localhost:4444/wd/hub");
+			driver = new RemoteWebDriver(urlChrome, capabilitiesChrome);
+			break;
+			
 		default:
 			break;
 		}
