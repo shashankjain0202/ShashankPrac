@@ -1,9 +1,12 @@
 package com.prac.base;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
@@ -15,6 +18,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -24,14 +28,15 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.asserts.SoftAssert;
 
+import com.prac.utils.OtherUtils;
 import com.prac.utils.excelUtils;
 import com.prac.utils.fileUtils;
 
 public class baseClass {
 	
-	public WebDriver driver;
 	public  SoftAssert sAssert = new SoftAssert();
 	public static Logger _log = Logger.getLogger(baseClass.class);
+	public WebDriver driver;
 	
 	public  baseClass() {
 		//DOMConfigurator.configure("src\\main\\resources\\log4j.xml");
@@ -89,6 +94,18 @@ public class baseClass {
 	@AfterClass
 	public void quitDriver() {
 		driver.quit();
+	}
+	
+	@AfterMethod
+	public void takeScreenShot(ITestResult result) {
+		
+		System.out.println(driver);
+		
+		if (ITestResult.FAILURE==result.getStatus()) {
+		  OtherUtils oUtils =  new OtherUtils();
+		  oUtils.takeScreenshot(driver, result);
+		}
+
 	}
 	
 	@BeforeMethod

@@ -26,22 +26,13 @@ public class TestNGListener extends baseClass implements ITestListener{
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
+		_log.info("***************************************Great: Test case passed:"+ result.getName()+"***********************************************");
 		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		/*
-		 * Calendar calendar = Calendar.getInstance(); SimpleDateFormat formater = new
-		 * SimpleDateFormat("dd_MM_yyyy_hh_mm_ss"); String destFilePath =
-		 * System.getProperty("user.dir")+ "/failure_screenshots/"+
-		 * "/"+formater.format(calendar.getTime())+ "/"+result.getName()+".png"; File
-		 * destFile = new File(destFilePath); OtherUtils.takeScreenshot(destFile,
-		 * driver);
-		 * System.out.println("Taking screenshot for failure of test case:"+result.
-		 * getName());
-		 */
+		_log.info("***************************************Alert: Test case Failed:"+ result.getName()+"***********************************************");
 	}
 
 	@Override

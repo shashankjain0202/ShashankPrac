@@ -14,12 +14,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+
 public class OtherUtils {
-	
-	public static WebDriver driver;
-	public OtherUtils(WebDriver driver){
-		this.driver = driver;
-	}
 	
 	public By getElementLocator(WebElement element) {
 		
@@ -75,11 +71,17 @@ public class OtherUtils {
 				
 	}
 	
-	public static void takeScreenshot(File destFile, WebDriver driver) {
+	public void takeScreenshot(WebDriver driver, ITestResult result) {
+		
+		Calendar calendar = Calendar.getInstance(); 
+		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss"); 
+		String destFilePath = System.getProperty("user.dir") + "/failure_screenshots/" + "/" + formater.format(calendar.getTime())+ "/" + result.getName() + ".png";
 		TakesScreenshot scrShot =((TakesScreenshot)driver);
+		File destFile = new File(destFilePath);
 		File src= scrShot.getScreenshotAs(OutputType.FILE);
 		try {
 			FileUtils.copyFile(src, destFile);
+			System.out.println("Taking screenshot for failure of test case:"+result.getName());	
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
